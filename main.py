@@ -2,9 +2,14 @@ import numpy as np
 import pickle
 import streamlit as st
 import os
+import joblib
 
-#loading the saved model
-loader_model = pickle.load(open('D:/Streamlit Project/model/car_price_prediction_model.sav', 'rb'))
+# #loading the saved model
+# loader_model = pickle.load(open('D:/Streamlit Project/model/car_price_prediction_model.sav', 'rb'))
+
+# Loading the saved model with a relative path
+model_path = os.path.join('model', 'car_price_prediction_model.sav')
+loader_model = joblib.load(model_path)
 
 def car_price_prediction(input_data):
     

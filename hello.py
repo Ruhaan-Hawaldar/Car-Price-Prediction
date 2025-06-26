@@ -18,12 +18,6 @@ prediction = loader_model.predict(input_data_reshaped)
 
 print("Predicted Price :",prediction,"Rupees")
 
-# if prediction[0] > 0.5:
-#     print('Suggestion: Sell')
-# else:
-#     print('Suggestion: Not Sell')
-
-# ...............classification model me =1,>1,<1 use karte hai ye regression model hai toh ek threshold value dena better hai
 
 # Optional: Compare to some threshold if needed
 threshold = 100000  # 1 lakh

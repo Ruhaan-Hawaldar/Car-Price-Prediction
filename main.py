@@ -4,7 +4,7 @@ import streamlit as st
 import os
 
 #loading the saved model
-loader_model = pickle.load(open('D:/Streamlit Project/model/car_price_prediction_model.sav', 'rb'))
+loader_model = pickle.load(open('model/car_price_prediction_model.sav', 'rb'))
 
 def car_price_prediction(input_data):
     

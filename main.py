@@ -1,10 +1,23 @@
-import numpy as np 
+# import numpy as np 
+# import pickle
+# import streamlit as st
+# import os
+
+# #loading the saved model
+# loader_model = pickle.load(open('model/car_price_prediction_model.sav', 'rb'))
+
+import numpy as np
 import pickle
 import streamlit as st
 import os
 
-#loading the saved model
-loader_model = pickle.load(open('model/car_price_prediction_model.sav', 'rb'))
+# Path-safe loading of the saved model
+BASE_DIR = os.path.dirname(__file__)
+model_path = os.path.join(BASE_DIR, "model", "car_price_prediction_model.sav")
+
+with open(model_path, "rb") as file:
+    loader_model = pickle.load(file)
+
 
 def car_price_prediction(input_data):
     
